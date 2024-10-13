@@ -1,0 +1,55 @@
+@startuml
+
+class StrategyController {
+    + pay(amount: double, type: String): String
+}
+note right:这个控制器类用于处理支付请求，它通过PayService来执行具体的支付操作。
+
+class PayService {
+    - payStrategy: PayStrategy
+    + setPayStrategy(payStrategy: PayStrategy)
+    + pay(amount: double): String
+}
+note right:这个服务类使用策略模式来处理不同的支付方式，它可以动态地设置和切换支付策略。
+
+class PayStrategy {
+    + pay(amount: double): String
+}
+note right:这是一个抽象策略类，定义了支付策略的接口，具体的支付策略类需要实现这个接口。
+
+class WeChatPayStrategy {
+    + pay(amount: double): String
+}
+note bottom:这个类实现了PayStrategy接口，提供了微信支付的具体实现。
+
+class AlipayPayStrategy {
+    + pay(amount: double): String
+}
+note bottom:这个类实现了PayStrategy接口，提供了支付宝支付的具体实现。
+
+
+class UnionPayStrategy {
+    + pay(amount: double): String
+}
+note bottom:这个类实现了PayStrategy接口，提供了银联支付的具体实现。
+
+class PaypalPayStrategy {
+    + pay(amount: double): String
+}
+note bottom:这个类实现了PayStrategy接口，提供了Paypal支付的具体实现。
+
+StrategyController --> PayService
+PayService --> PayStrategy
+PayStrategy <|-- WeChatPayStrategy
+PayStrategy <|-- AlipayPayStrategy
+PayStrategy <|-- UnionPayStrategy
+PayStrategy <|-- PaypalPayStrategy
+note as desc
+    策略模式类图，基本定义如下：
+    略模式是一种行为型设计模式，它定义了一些列的算法，并将他们封装起来，使他们可以相互替换，而不影像客户端使用。
+    1、策略模式的主要角色有三个：环境类（Context），抽象策略类（Strategy）和具体策略类（ConcreteStrategy）。
+    2、环境类持有一个策略对象的引用，并根据不同情况选择不同的策略执行。
+    3、抽象策略类定义一个公共接口，用于封装不同的算法。具体策略类实现了抽象策略类的接口，并提供具体的算法实现。
+end note
+
+@enduml

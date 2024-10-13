@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.atguigu</groupId>
-    <artifactId>designPatternCode</artifactId>
+    <artifactId>decoratorMode</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>designPatternCode</name>
-    <description>designPatternCode</description>
+    <name>DecoratorMode</name>
+    <description>DecoratorMode</description>
     <url/>
     <licenses>
         <license/>
@@ -32,10 +32,6 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
@@ -53,6 +49,7 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>5.8.10</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

@@ -1,0 +1,47 @@
+@startuml
+class UserController{
+    + getUser(id:int,decorator:String):String
+}
+note right:处理用户请求
+
+interface UserServicer{
+    # getUserName(id:int):String
+}
+note right : service的抽象组件
+
+class UserServiceImpl{
+    + getUserName(id:int):String
+}
+note left : UserServicer接口的默认实现类
+
+abstract UserServiceDecorator{
+    # userService:UserServicer
+    + UserServiceDecorator(userService:UserServicer)
+    + getUserName(id:int):String
+}
+note left : 定义一个抽象的装饰者类，它实现了UserService接口,并且持有一个UserService对象引用
+class LogUserServiceDecorator{
+    + LogUserServiceDecorator(userService:UserServicer)
+    + getUserName(id:int):String
+}
+note bottom : 定义一个具体的装饰者类，它表示日志功能
+class AuthUserServiceDecorator{
+    + AuthUserServiceDecorator(userService:UserServicer)
+    + getUserName(id:int):String
+ }
+note bottom : 定义一个具体的装饰者类，它表示权限检查的功能
+class LogAndAuthUserServiceDecorator{
+    - logUserServiceDecorator:LogUserServiceDecorator
+    - authUserServiceDecorator:AuthUserServiceDecorator
+    + LogAndAuthUserServiceDecorator(logUserServiceDecorator:LogUserServiceDecorator,authUserServiceDecorator:AuthUserServiceDecorator)
+    + getUserName(id:int)
+}
+note bottom :定义了一个新的装饰者类，它同时持有日志装饰者和权限装饰者的引用，并在构造方法中引入他们
+
+UserController-->UserServicer:调用
+UserServicer <|.. UserServiceImpl :实现
+UserServicer <|.. UserServiceDecorator :实现
+UserServiceDecorator <|-- LogUserServiceDecorator:继承
+UserServiceDecorator <|-- AuthUserServiceDecorator:继承
+UserServiceDecorator <|-- LogAndAuthUserServiceDecorator:继承
+@enduml

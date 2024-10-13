@@ -12,7 +12,7 @@ class PayService {
 }
 note right:这个服务类使用策略模式来处理不同的支付方式，它可以动态地设置和切换支付策略。
 
-class PayStrategy {
+interface PayStrategy {
     + pay(amount: double): String
 }
 note right:这是一个抽象策略类，定义了支付策略的接口，具体的支付策略类需要实现这个接口。
@@ -38,12 +38,12 @@ class PaypalPayStrategy {
 }
 note bottom:这个类实现了PayStrategy接口，提供了Paypal支付的具体实现。
 
-StrategyController --> PayService
-PayService --> PayStrategy
-PayStrategy <|-- WeChatPayStrategy
-PayStrategy <|-- AlipayPayStrategy
-PayStrategy <|-- UnionPayStrategy
-PayStrategy <|-- PaypalPayStrategy
+StrategyController --> PayService:调用
+PayService --> PayStrategy:调用
+PayStrategy <|.. WeChatPayStrategy:实现
+PayStrategy <|.. AlipayPayStrategy:实现
+PayStrategy <|.. UnionPayStrategy:实现
+PayStrategy <|.. PaypalPayStrategy:实现
 note as desc
     策略模式类图，基本定义如下：
     略模式是一种行为型设计模式，它定义了一些列的算法，并将他们封装起来，使他们可以相互替换，而不影像客户端使用。

@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/adapterMode/pom.xml" />
         <option value="$PROJECT_DIR$/combination/pom.xml" />
         <option value="$PROJECT_DIR$/chainOfResponsibilityMode/pom.xml" />
+        <option value="$PROJECT_DIR$/chainOfRespAndIterator/pom.xml" />
       </list>
     </option>
   </component>

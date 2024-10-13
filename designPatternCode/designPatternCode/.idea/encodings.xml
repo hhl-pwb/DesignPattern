@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/adapterMode/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chainOfRespAndIterator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chainOfResponsibilityMode/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/combination/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/decoratorMode/src/main/java" charset="UTF-8" />

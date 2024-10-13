@@ -8,14 +8,18 @@
         <outputRelativeToContentRoot value="true" />
         <module name="designPatternCode" />
         <module name="adapterMode" />
+        <module name="chainOfResponsibilityMode" />
         <module name="strategicMode" />
         <module name="decoratorMode" />
+        <module name="combination" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="adapterMode" options="-parameters" />
+      <module name="chainOfResponsibilityMode" options="-parameters" />
+      <module name="combination" options="-parameters" />
       <module name="decoratorMode" options="-parameters" />
       <module name="designPatternCode" options="-parameters" />
       <module name="strategicMode" options="-parameters" />

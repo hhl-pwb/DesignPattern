@@ -8,6 +8,8 @@
         <option value="$PROJECT_DIR$/strategicMode/pom.xml" />
         <option value="$PROJECT_DIR$/DecoratorMode/pom.xml" />
         <option value="$PROJECT_DIR$/adapterMode/pom.xml" />
+        <option value="$PROJECT_DIR$/combination/pom.xml" />
+        <option value="$PROJECT_DIR$/chainOfResponsibilityMode/pom.xml" />
       </list>
     </option>
   </component>

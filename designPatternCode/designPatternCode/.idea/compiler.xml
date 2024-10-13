@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="designPatternCode" />
+        <module name="adapterMode" />
         <module name="strategicMode" />
         <module name="decoratorMode" />
       </profile>
@@ -14,6 +15,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="adapterMode" options="-parameters" />
       <module name="decoratorMode" options="-parameters" />
       <module name="designPatternCode" options="-parameters" />
       <module name="strategicMode" options="-parameters" />

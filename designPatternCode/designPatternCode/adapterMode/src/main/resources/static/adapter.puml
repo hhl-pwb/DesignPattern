@@ -1,0 +1,30 @@
+@startuml
+class payForThirdService{
+    - payForThirdService:PayForThirdService
+    + payForThird(id:String,amount:BigDecimal,type:String):String
+}
+
+class PayForThirdService{
+    - payAdapters:List<PayAdapter>
+    + payForThird(id:String,amount:BigDecimal,type:String):String
+}
+
+interface PayAdapter{
+    + support(adapter:String):boolean
+    + pay(d:String,amount:BigDecimal,adapt:Object):String
+}
+
+class PayForAlipayAdapter{
+    + support(adapter:String):boolean
+    + pay(d:String,amount:BigDecimal,adapt:Object):String
+}
+
+class PayForWechatAdapter{
+     + support(adapter:String):boolean
+     + pay(d:String,amount:BigDecimal,adapt:Object):String
+}
+payForThirdService --> PayForThirdService:调用
+PayForThirdService-->PayAdapter:调用
+PayAdapter <|.. PayForAlipayAdapter:实现
+PayAdapter <|.. PayForWechatAdapter:实现
+@enduml

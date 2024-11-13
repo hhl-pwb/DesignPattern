@@ -25,6 +25,7 @@ public class ReviewArticleService {
         Iterator<ReviewHandler> iterator = reviewHandlers.iterator();
         Result result = null;
         while (iterator.hasNext()){
+            // ReviewHandler review就是具体的实现类，比如SensitiveWordRevieHandler
             ReviewHandler review = iterator.next();
             result = review.review(article);
             if(!(Boolean) result.getIsApproved()){

@@ -16,6 +16,7 @@
         <option value="$PROJECT_DIR$/chainOfRespAndIterator/pom.xml" />
         <option value="$PROJECT_DIR$/DelegationMode/pom.xml" />
         <option value="$PROJECT_DIR$/delegationMode/pom.xml" />
+        <option value="$PROJECT_DIR$/commandMode/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

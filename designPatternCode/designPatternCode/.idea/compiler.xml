@@ -12,6 +12,7 @@
         <module name="strategicMode" />
         <module name="chainOfRespAndIterator" />
         <module name="chainOfResponsibilityMode" />
+        <module name="commandMode" />
         <module name="decoratorMode" />
         <module name="combination" />
       </profile>
@@ -27,6 +28,7 @@
       <module name="chainOfRespAndIterator" options="-parameters" />
       <module name="chainOfResponsibilityMode" options="-parameters" />
       <module name="combination" options="-parameters" />
+      <module name="commandMode" options="-parameters" />
       <module name="decoratorMode" options="-parameters" />
       <module name="delegationMode" options="-parameters" />
       <module name="designPatternCode" options="-parameters" />

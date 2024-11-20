@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="statusMode" />
         <module name="designPatternCode" />
+        <module name="factoryMode" />
         <module name="adapterMode" />
         <module name="delegationMode" />
         <module name="strategicMode" />
@@ -33,6 +34,7 @@
       <module name="decoratorMode" options="-parameters" />
       <module name="delegationMode" options="-parameters" />
       <module name="designPatternCode" options="-parameters" />
+      <module name="factoryMode" options="-parameters" />
       <module name="statusMode" options="-parameters" />
       <module name="strategicMode" options="-parameters" />
     </option>

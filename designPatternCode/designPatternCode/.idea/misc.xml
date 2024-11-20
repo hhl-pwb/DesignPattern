@@ -18,6 +18,7 @@
         <option value="$PROJECT_DIR$/delegationMode/pom.xml" />
         <option value="$PROJECT_DIR$/commandMode/pom.xml" />
         <option value="$PROJECT_DIR$/statusMode/pom.xml" />
+        <option value="$PROJECT_DIR$/factoryMode/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
